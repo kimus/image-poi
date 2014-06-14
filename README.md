@@ -1,7 +1,7 @@
-image-poi
-=========
+Description
+===========
 
-Add Point Of Interest Field for supporting sorl-thumbnail.
+This project makes it possible to choose how an image will be cropped by [sorl-thumbnail](https://github.com/mariocesar/sorl-thumbnail). Choosing Noop, Top, Center, etc and also a widget to choose the Point Of Interest of an image.
 
 Thanks to [francescortiz/image](https://github.com/francescortiz/image) where this is based from.
 
