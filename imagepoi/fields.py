@@ -9,6 +9,8 @@ from .forms import ImageCenterFormField
 class ImageCenter(object):
     def __init__(self, image_field, value=None):
         self.image_field = image_field
+        if value is not None:
+            value = value.strip()
         self._value = value
         self.type = 'top'
         self.x = 0
