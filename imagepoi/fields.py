@@ -20,9 +20,9 @@ class ImageCenter(object):
             else:
                 self.type = 'point'
                 try:
-                    x, y = value.replace('%', '').split(' ')
-                    self.x = int(x)
-                    self.y = int(y)
+                    p = value.replace('%', '').split(' ')
+                    self.x = int(p[0])
+                    self.y = int(p[1])
                 except ValueError:
                     self.type = 'noop'
         else:
