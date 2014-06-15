@@ -76,7 +76,7 @@ class ImageCenterFormWidget(forms.Widget):
                 resp += '            }\n'
                 resp += '        });\n'
 
-                resp += '        image.parent().click(function(e){\n debugger;'
+                resp += '        image.parent().click(function(e){\n'
                 resp += '            var nx = Math.ceil(e.pageX - image.offset().left);\n'
                 resp += '            var ny = Math.ceil(e.pageY - image.offset().top);\n'
                 resp += '            crosshair.css({left: (nx - 7) + "px", top: (ny - 7) + "px"});\n'
