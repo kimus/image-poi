@@ -6,7 +6,7 @@ This project makes it possible to choose how an image will be cropped by [sorl-t
 Thanks to [francescortiz/image](https://github.com/francescortiz/image) where this is based from.
 
 
-![image example](https://www.dropbox.com/s/0mf047cgguns5h2/Screenshot%202014-06-15%2012.58.34.png)
+![image example](https://www.dropbox.com/s/0mf047cgguns5h2/Screenshot%202014-06-15%2012.58.34.png?dl=1)
 
 
 ## Examples
