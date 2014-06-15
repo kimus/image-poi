@@ -59,7 +59,7 @@ class ImageCenterFormWidget(forms.Widget):
                 
                 resp += '        input.hide();\n'
 
-                resp += '        if (input.val() == "noop" || input.val() == "top" || input.val() == "center") {\n'
+                resp += '        if (input.val() == "" || input.val() == "noop" || input.val() == "top" || input.val() == "center") {\n'
                 resp += '            select.val(input.val());\n'
                 resp += '            image.parent().css({display: "none"});\n'
                 resp += '        } else {\n'
@@ -68,7 +68,7 @@ class ImageCenterFormWidget(forms.Widget):
                 resp += '        }\n'
 
                 resp += '        select.change(function(e){\n'
-                resp += '            if (select.val() == "noop" || select.val() == "top" || select.val() == "center") {\n'
+                resp += '            if (select.val() == "" || select.val() == "noop" || select.val() == "top" || select.val() == "center") {\n'
                 resp += '                input.val(select.val());\n'
                 resp += '                image.parent().css({display: "none"});\n'
                 resp += '            } else {\n'
