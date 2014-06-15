@@ -31,10 +31,11 @@ class ImageCenterFormWidget(forms.Widget):
             try:
                 resp =  '<div id="imagepoi-widget-' + str(COUNTER) + '">\n'
                 resp += '    <select class="imagepoi-select" style="display: block; width: 150px;">\n'
-                resp += '        <option value="noop">None</option>\n'
+                resp += '        <option value="">None</option>\n'
                 resp += '        <option value="top">Top</option>\n'
                 resp += '        <option value="center">Center</option>\n'
                 resp += '        <option value="point">Point</option>\n'
+                resp += '        <option value="noop">Disable</option>\n'
                 resp += '    </select>\n'
                 resp += '    <div class="imagepoi-point" style="clear: left; display: none; position:relative;">\n'
                 resp += '        <img class="imagepoi-image" src="' + reverse('imagepoi.views.image', args=(value.image_path,)) + '" onclick=""/>\n'

@@ -17,7 +17,7 @@ class ImageCenter(object):
         self.y = 0
 
         if value is not None:
-            if value == 'noop' or value == 'top' or value == 'center':
+            if value == '' or value == 'noop' or value == 'top' or value == 'center':
                 self.type = value
             else:
                 self.type = 'point'
@@ -35,7 +35,7 @@ class ImageCenter(object):
         return self.__unicode__()
 
     def __unicode__(self):
-        if self._value == 'noop' or self._value == 'top' or self._value == 'center':
+        if self._value == '' or self._value == 'noop' or self._value == 'top' or self._value == 'center':
             return self._value
         else:
             return str(self.x) + "% " + str(self.y) + "%"
@@ -53,7 +53,7 @@ class ImageCenterField(models.Field):
         #if image_field is not None:
         #    if not isinstance(image_field, models.ImageField):
         #        raise ValueError("image_field value must be an ImageField instance")
-        kwargs["default"] = "noop"
+        kwargs["default"] = ""
         self.image_field = image_field
         super(ImageCenterField, self).__init__(*args, **kwargs)
 
