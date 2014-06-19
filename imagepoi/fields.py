@@ -26,9 +26,9 @@ class ImageCenter(object):
                     self.x = int(p[0])
                     self.y = int(p[1])
                 except ValueError:
-                    self.type = 'noop'
+                    self.type = 'top'
         else:
-            self._value = 'noop'
+            self._value = 'top'
 
     @property
     def value(self):
@@ -53,7 +53,7 @@ class ImageCenterField(models.Field):
         #if image_field is not None:
         #    if not isinstance(image_field, models.ImageField):
         #        raise ValueError("image_field value must be an ImageField instance")
-        kwargs["default"] = ""
+        kwargs["default"] = "top"
         self.image_field = image_field
         super(ImageCenterField, self).__init__(*args, **kwargs)
 
